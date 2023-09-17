@@ -1,0 +1,73 @@
+
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: var(--font-grotesk), sans-serif;
+}
+
+/* Contenedor del Personaje*/ 
+.character-container{
+  max-width: max-content;
+  padding-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  text-align: center;;
+}
+
+.nameCharacter {
+  text-align: center;
+  color:cadetblue;
+}
+
+.character-container h3{
+  text-align: center;
+  color: bisque;
+}
+.character-container p {
+  text-align: left;
+}
+
+.character-container ul {
+  text-decoration: none;
+  list-style: none;
+}
+
+.character-container .character-card__image{
+  border-style: dashed;
+  border-width: 2px;
+  border-color: red;
+}
+
+/* Adaptacion de ancho de la lista*/
+
+.infoCharacter{
+  padding: 10px;
+  font-size: '20px';
+  width: max-content;
+}
+@media screen and (min-width: 525px){
+  .infoCharacter{
+    padding: 10px;
+    font-size: '20px';
+    width: 400px;
+  }
+}
+
+@media (prefers-color-scheme: light) { /* era dark pero en chrome no funciona*/
+  html{
+    color-scheme: light;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
