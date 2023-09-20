@@ -1,10 +1,20 @@
-// 'use client'
+'use client'
 
-import { useEffect, useState} from 'react'
 
-export function useCounter() {
-    const [count, setCount] = useState(0);
-    
-    const increment = () => useEffect(() => { setCount(count+1) }, [count]);
-    return { count, increment };
+var count = getStorageCount('count');
+
+function useCounter() {
+        localStorage.setItem('count', String(count+1));
+        count = getStorageCount('count');
+        window.location.href = 'http://localhost:3000/personajes';
+        return count;
+}
+
+function getStorageCount(key: any){
+    return Number(localStorage.getItem(key));
+}
+
+export{
+    useCounter,
+    count
 }
