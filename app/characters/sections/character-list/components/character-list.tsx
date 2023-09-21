@@ -2,11 +2,14 @@ import Image from "next/image"
 import "./character-list.css"
 import Link from "next/link"
 import { Character } from "@/app/characters/modules/domain/entities/character.model"
+import Counter from "../../counter-page/components/counterPage"
 
 const CharacterList = ({characters}: {characters: Array<Character>}) => {
 
     return (
         <section className="characters-list">
+            {/* Receptor datos Counter */}
+            <Counter/>
             <ul className="charaters">
                 {characters.map(character => {
                     return (
